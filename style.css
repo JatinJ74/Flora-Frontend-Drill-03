@@ -1,0 +1,502 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+p,
+h3,
+h4,
+h1,
+b {
+  text-wrap: balance;
+  color: black;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  width: min-content;
+}
+
+main {
+  padding: 0px 2rem;
+  /* margin-bottom: 1rem; */
+}
+
+@keyframes appear {
+  from{
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+
+.animation{
+  animation: appear 3s cubic-bezier(0.215, 0.610, 0.355, 1);
+  animation-timeline: view();
+  animation-range: entry 0% cover 25%;
+}
+
+.section-hero {
+  display: grid;
+  grid-template-rows: 0.5fr;
+  place-items: center;
+  /* width: fit-content; */
+  text-wrap: balance;
+  /* margin-top: 2rem; */
+  /* padding: 1rem; */
+}
+
+.hero-section-image {
+  width: inherit;
+  height: inherit;
+  /* position: absolute; */
+  /* z-index: 3; */
+}
+
+.hero-section-image-container {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  /* position: absolute;
+    top: 0px;
+    bottom: 0px; */
+  /* z-index: 2; */
+}
+
+.hero-header {
+  width: 100%;
+  height: inherit;
+  /* position: relative; */
+}
+
+/* .hero-info{
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+
+} */
+
+.hero-info > h2,
+p {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  /* color: white; */
+  /* font-size: clamp(20px,30px,40px); */
+  /* z-index: 5; */
+}
+
+.heroTitle{
+  font-size: xx-large;
+  color: white;
+  width: 150%;
+  text-wrap: balance;
+}
+
+.hero-info {
+  /* position: absolute; */
+  position: relative;
+  bottom: 25rem;
+  width: 50%;
+  /* translate: 50%; */
+  /* top: 0px; */
+  /* bottom: -50%; */
+}
+
+
+
+.btn {
+  width: fit-content;
+  margin-left: 2rem;
+  padding: 0.5rem;
+  background-color: burlywood;
+  border: none;
+  cursor: pointer;;
+}
+
+.btn:hover{
+  background-color: rgb(248, 225, 195);
+  transition: all 0.3s;
+}
+
+.hero-card-crousel {
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); */
+  /* background-color: aqua; */
+  /* height: fit-content; */
+  /* gap: 1.5rem; */
+  /* height: 150px;  */
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: fit-content;
+  /* gap: 1rem;/ */
+  /* justify-content: center;
+    align-items: center; */
+  /* place-items: center; */
+  /* place-content: center; */
+  /* margin-top: 1.5rem; */
+  /* padding: 0px; */
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.control-btn{
+  visibility: hidden;
+}
+
+
+.crousel-card {
+  width: 200px;
+  text-align: center;
+}
+
+.carousel-card-flower-img {
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+}
+
+hr {
+  border-top: white 1px solid;
+  height: 2px;
+  border-bottom: gray 1px solid;
+  background-color: white;
+  margin: 1rem 0px;
+}
+
+.article-container {
+  width: 100%;
+  height: fit-content;
+  margin: 2rem 0px;
+  padding: 1rem;
+}
+
+.article {
+  text-align: center;
+  width: 70%;
+  /* justify-content: center; */
+  place-self: center;
+}
+
+.ln-mor-btn {
+  width: fit-content;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.ln-mor-btn::after {
+  content: " ";
+  background: linear-gradient(90deg, #fb7c00, #e73b50, #9e009b);
+  height: 2px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 103px;
+  /* transition: width 2s linear; */
+}
+
+.ln-mor-btn:hover::after {
+  animation: move-right 2s ease-in-out;
+  animation-fill-mode: forwards;
+  
+}
+
+@keyframes move-right {
+  from {
+     transform: translateX(0px);
+     width: 0px;
+  }
+  to {
+    transform: translateX(12px);
+    width: 90px;
+   
+  }
+}
+
+.occasion-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  padding: 0rem;
+}
+
+.occasion-card > * {
+  text-align: center;
+  padding: 10px 5px;
+}
+
+.occasion-card {
+    font-size: 1em;
+    padding: 1em;
+}
+
+
+
+.occassion-img {
+  width: 100%;
+  height: fit-content;
+  padding: 1rem;
+}
+
+.product-section {
+  margin: 2rem 0px;
+  padding: 0rem;
+}
+
+.product-title {
+  text-align: center;
+}
+
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  /* padding: 0px 2rem; */
+}
+
+.product-card p {
+  margin-bottom: 1rem;
+}
+
+.flower-img {
+  width: inherit;
+  height: fit-content;
+}
+
+.flower-card {
+  width: 100%;
+  padding: 2rem;
+  height: fit-content;
+}
+
+.product-card p,
+b {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.product-section > .centered-btn {
+  margin: 2rem 0px;
+  place-self: center;
+}
+
+.mission {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 2rem 0px;
+  padding: 1rem 0px;
+  gap: 1rem;
+  align-items: center;
+  /* height: 70vh; */
+}
+
+.mission > div {
+  width: 80%;
+  /* height: fit-content; */
+  /* position: relative; */
+}
+
+.image-container {
+  background-color: rgb(248, 221, 225);
+  height: fit-content;
+  /* height: inherit; */
+  /* padding: 1rem 0px; */
+}
+
+.mission-image {
+  height: fit-content;
+  width: 90%;
+  /* position: absolute;
+    top: -9%; */
+}
+
+.mission-info {
+  padding: 1rem 0px;
+}
+
+.mission-info > * {
+  margin-bottom: 1rem;
+  padding-left: 0px;
+  text-align: left;
+  /* align-items: center; */
+}
+
+footer {
+  padding: 0rem 1rem;
+}
+
+.footer {
+  margin: 1rem 0px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 1rem;
+}
+
+.icons > * {
+  /* margin-top: 0.2rem; */
+  margin-right: 1rem;
+}
+
+.socialmedia {
+  margin: 1rem 0px;
+}
+
+.subscription-card p,
+.services p,
+.company p,
+.socialmedia p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.subscription-card h3,
+.subscription-card p {
+  margin-bottom: 1rem;
+}
+
+.services p,
+.services ul > li {
+  margin: 0.5rem;
+}
+
+.company p {
+  margin: 0.5rem 0px;
+}
+
+.connect {
+  display: flex;
+  gap: 1rem;
+  width: inherit;
+}
+
+.company,
+.services {
+  width: 50%;
+  margin-right: 1rem;
+}
+
+.email-input{
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: black 1px solid;
+}
+
+@media only screen and ((min-width: 0px) and (max-width: 540px)) {
+    .section-hero {
+      display: grid;
+      grid-template-rows: 1fr;
+      place-items: center;
+      /* width: fit-content; */
+      text-wrap: balance;
+      margin-top: 2rem;
+      /* padding: 1rem; */
+    }
+  
+    .heroTitle{
+      font-size: medium;
+      color: black;
+      width: fit-content;
+      text-wrap: balance;
+    }
+
+    .hero-section-image {
+      width: inherit;
+      height: inherit;
+      /* position: absolute; */
+      /* z-index: 3; */
+    }
+  
+    .hero-section-image-container {
+      width: 100%;
+      height: 50%;
+      /* position: relative; */
+      /* position: absolute;
+      top: 0px;
+      bottom: 0px; */
+      /* z-index: 2; */
+      margin-bottom: 1rem;
+    }
+  
+    .hero-header {
+      width: 100%;
+      height: fit-content;
+      position: relative;
+    }
+  
+    .hero-info{
+      width: 100%;
+      /* position: absolute;
+      top: 50%;
+      bottom: 50%; */
+  
+  }
+  
+    .hero-info > h2,
+    p {
+      margin-bottom: 1rem;
+      padding-left: 0rem;
+      /* z-index: 5; */
+    }
+  
+    .hero-info {
+      /* position: absolute; */
+      position: relative;
+      bottom: 0rem;
+      margin-bottom: 1rem;
+      /* translate: 50%; */
+      /* top: 0px; */
+      /* bottom: -50%; */
+    }
+  
+    .slider div:not(div:first-child){
+      display: none;
+    }
+    
+    .control-btn{
+      visibility: visible;
+      place-self: center;
+    }
+
+    
+    .btn {
+    width: fit-content;
+    margin-left: 0rem;
+    padding: 0.5rem;
+    }
+
+    .article {
+        text-align: center;
+        width: 100%;
+        /* justify-content: center; */
+        /* place-self: center;/ */
+      }
+
+    .product-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .occasion-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .occasion-card {
+        font-size: 0.7em;
+        padding: 1em;
+    }
+  }
