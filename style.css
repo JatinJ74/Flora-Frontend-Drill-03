@@ -4,11 +4,7 @@
   box-sizing: border-box;
 }
 
-p,
-h3,
-h4,
-h1,
-b {
+p,h3,h4,h1,b {
   text-wrap: balance;
   color: black;
 }
@@ -23,9 +19,47 @@ a {
   width: min-content;
 }
 
+header{
+  padding: 8px 1rem;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  top: 0px;
+  background-color: white;
+  
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: inherit;
+}
+
+#small-screen{
+  display: none;
+}
+
+.centered{
+  margin-left: 50%;
+}
+
+.center ul{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  gap: 1rem;
+}
+
+.right ul{
+  display:flex ;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
 main {
   padding: 0px 2rem;
-  /* margin-bottom: 1rem; */
 }
 
 @keyframes appear {
@@ -39,7 +73,6 @@ main {
   }
 }
 
-
 .animation{
   animation: appear 3s cubic-bezier(0.215, 0.610, 0.355, 1);
   animation-timeline: view();
@@ -50,50 +83,29 @@ main {
   display: grid;
   grid-template-rows: 0.5fr;
   place-items: center;
-  /* width: fit-content; */
   text-wrap: balance;
-  /* margin-top: 2rem; */
-  /* padding: 1rem; */
+  margin-top: 3.3rem;
 }
 
 .hero-section-image {
   width: inherit;
   height: inherit;
-  /* position: absolute; */
-  /* z-index: 3; */
 }
 
 .hero-section-image-container {
   width: 100%;
   height: 100vh;
   position: relative;
-  /* position: absolute;
-    top: 0px;
-    bottom: 0px; */
-  /* z-index: 2; */
 }
 
 .hero-header {
   width: 100%;
   height: inherit;
-  /* position: relative; */
 }
 
-/* .hero-info{
-    width: 60%;
-    position: absolute;
-    top: 50%;
-    bottom: 50%;
-
-} */
-
-.hero-info > h2,
-p {
+.hero-info > h2,p {
   margin-bottom: 1rem;
   padding-left: 2rem;
-  /* color: white; */
-  /* font-size: clamp(20px,30px,40px); */
-  /* z-index: 5; */
 }
 
 .heroTitle{
@@ -104,16 +116,10 @@ p {
 }
 
 .hero-info {
-  /* position: absolute; */
   position: relative;
   bottom: 25rem;
   width: 50%;
-  /* translate: 50%; */
-  /* top: 0px; */
-  /* bottom: -50%; */
 }
-
-
 
 .btn {
   width: fit-content;
@@ -130,24 +136,11 @@ p {
 }
 
 .hero-card-crousel {
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); */
-  /* background-color: aqua; */
-  /* height: fit-content; */
-  /* gap: 1.5rem; */
-  /* height: 150px;  */
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: fit-content;
-  /* gap: 1rem;/ */
-  /* justify-content: center;
-    align-items: center; */
-  /* place-items: center; */
-  /* place-content: center; */
-  /* margin-top: 1.5rem; */
-  /* padding: 0px; */
   gap: 2rem;
   margin-bottom: 1rem;
 }
@@ -155,7 +148,6 @@ p {
 .control-btn{
   visibility: hidden;
 }
-
 
 .crousel-card {
   width: 200px;
@@ -186,7 +178,6 @@ hr {
 .article {
   text-align: center;
   width: 70%;
-  /* justify-content: center; */
   place-self: center;
 }
 
@@ -204,7 +195,6 @@ hr {
   bottom: 0px;
   left: 0px;
   width: 103px;
-  /* transition: width 2s linear; */
 }
 
 .ln-mor-btn:hover::after {
@@ -221,7 +211,6 @@ hr {
   to {
     transform: translateX(12px);
     width: 90px;
-   
   }
 }
 
@@ -241,8 +230,6 @@ hr {
     padding: 1em;
 }
 
-
-
 .occassion-img {
   width: 100%;
   height: fit-content;
@@ -261,7 +248,6 @@ hr {
 .product-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  /* padding: 0px 2rem; */
 }
 
 .product-card p {
@@ -298,27 +284,20 @@ b {
   padding: 1rem 0px;
   gap: 1rem;
   align-items: center;
-  /* height: 70vh; */
 }
 
 .mission > div {
   width: 80%;
-  /* height: fit-content; */
-  /* position: relative; */
 }
 
 .image-container {
   background-color: rgb(248, 221, 225);
   height: fit-content;
-  /* height: inherit; */
-  /* padding: 1rem 0px; */
 }
 
 .mission-image {
   height: fit-content;
   width: 90%;
-  /* position: absolute;
-    top: -9%; */
 }
 
 .mission-info {
@@ -329,7 +308,6 @@ b {
   margin-bottom: 1rem;
   padding-left: 0px;
   text-align: left;
-  /* align-items: center; */
 }
 
 footer {
@@ -347,7 +325,6 @@ footer {
 }
 
 .icons > * {
-  /* margin-top: 0.2rem; */
   margin-right: 1rem;
 }
 
@@ -355,21 +332,16 @@ footer {
   margin: 1rem 0px;
 }
 
-.subscription-card p,
-.services p,
-.company p,
-.socialmedia p {
+.subscription-card p,.services p,.company p,.socialmedia p {
   margin: 0px;
   padding: 0px;
 }
 
-.subscription-card h3,
-.subscription-card p {
+.subscription-card h3,.subscription-card p {
   margin-bottom: 1rem;
 }
 
-.services p,
-.services ul > li {
+.services p,.services ul > li {
   margin: 0.5rem;
 }
 
@@ -383,8 +355,7 @@ footer {
   width: inherit;
 }
 
-.company,
-.services {
+.company,.services {
   width: 50%;
   margin-right: 1rem;
 }
@@ -396,14 +367,50 @@ footer {
 }
 
 @media only screen and ((min-width: 0px) and (max-width: 540px)) {
+
+    #large-screen{
+      display: none;
+    }
+
+    #small-screen{
+      display: contents;
+    }
+
+    .center {
+      display: flex;
+      flex-direction:row;
+      justify-content:space-between;
+      padding: 0.5rem 0px;
+      height: max-content;
+    }
+
+    #list-items{
+      background-color: burlywood;
+      position: absolute;
+      left: 0px;
+      width: 100%;
+      z-index: 1;
+    }
+
+    #list-items li{
+      place-self: center;
+      padding: 0.5rem;
+      text-align: center;
+    }
+
+    .icons-on-right{
+      display: flex;
+    }
+
+    .logo  *{
+      margin: 0px;
+    }
     .section-hero {
       display: grid;
       grid-template-rows: 1fr;
       place-items: center;
-      /* width: fit-content; */
       text-wrap: balance;
-      margin-top: 2rem;
-      /* padding: 1rem; */
+      margin-top: 3.2rem;
     }
   
     .heroTitle{
@@ -416,18 +423,11 @@ footer {
     .hero-section-image {
       width: inherit;
       height: inherit;
-      /* position: absolute; */
-      /* z-index: 3; */
     }
   
     .hero-section-image-container {
       width: 100%;
       height: 50%;
-      /* position: relative; */
-      /* position: absolute;
-      top: 0px;
-      bottom: 0px; */
-      /* z-index: 2; */
       margin-bottom: 1rem;
     }
   
@@ -439,27 +439,18 @@ footer {
   
     .hero-info{
       width: 100%;
-      /* position: absolute;
-      top: 50%;
-      bottom: 50%; */
-  
   }
   
     .hero-info > h2,
     p {
       margin-bottom: 1rem;
       padding-left: 0rem;
-      /* z-index: 5; */
     }
   
     .hero-info {
-      /* position: absolute; */
       position: relative;
       bottom: 0rem;
       margin-bottom: 1rem;
-      /* translate: 50%; */
-      /* top: 0px; */
-      /* bottom: -50%; */
     }
   
     .slider div:not(div:first-child){
@@ -471,7 +462,6 @@ footer {
       place-self: center;
     }
 
-    
     .btn {
     width: fit-content;
     margin-left: 0rem;
@@ -481,8 +471,6 @@ footer {
     .article {
         text-align: center;
         width: 100%;
-        /* justify-content: center; */
-        /* place-self: center;/ */
       }
 
     .product-cards{
